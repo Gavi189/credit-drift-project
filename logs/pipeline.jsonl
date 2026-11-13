@@ -1,0 +1,120 @@
+{"ts": "2026-11-04T01:16:56+00:00", "level": "INFO", "message": "generate_datasets iniciado", "stage": "generate_datasets", "status": "started"}
+{"ts": "2026-11-04T01:16:56+00:00", "level": "INFO", "message": "generate_datasets concluído", "stage": "generate_datasets", "status": "success", "rows": 9210, "duration_s": 0.102}
+{"ts": "2026-11-04T01:16:56+00:00", "level": "INFO", "message": "data_contract_reference iniciado", "stage": "data_contract_reference", "status": "started"}
+{"ts": "2026-11-04T01:16:56+00:00", "level": "INFO", "message": "data_contract_reference concluído", "stage": "data_contract_reference", "status": "success", "rows": 6000, "contract_passed": true, "duration_s": 0.022}
+{"ts": "2026-11-04T01:16:56+00:00", "level": "INFO", "message": "train_baseline iniciado", "stage": "train_baseline", "status": "started"}
+{"ts": "2026-11-04T01:16:57+00:00", "level": "INFO", "message": "train_baseline concluído", "stage": "train_baseline", "status": "success", "rows": 6000, "auc": 0.7141, "duration_s": 1.195}
+{"ts": "2026-11-04T01:16:57+00:00", "level": "INFO", "message": "data_contract_bad_batch iniciado", "stage": "data_contract_bad_batch", "status": "started"}
+{"ts": "2026-11-04T01:16:57+00:00", "level": "ERROR", "message": "data_contract_bad_batch FALHOU: Lote rejeitado: 55/210 linhas violam o contrato (7 tipos de violação).", "stage": "data_contract_bad_batch", "status": "failed", "error": "DataContractError", "rows": 210, "duration_s": 0.077}
+{"ts": "2026-11-04T01:16:57+00:00", "level": "WARNING", "message": "INGESTÃO BLOQUEADA: Lote rejeitado: 55/210 linhas violam o contrato (7 tipos de violação).", "stage": "ingestion", "status": "blocked", "failed_rows": 55}
+{"ts": "2026-11-04T01:17:01+00:00", "level": "INFO", "message": "MLflow: run 'etapa1_baseline' registrada", "stage": "mlflow", "status": "success"}
+{"ts": "2026-11-04T01:17:22+00:00", "level": "INFO", "message": "generate_datasets iniciado", "stage": "generate_datasets", "status": "started"}
+{"ts": "2026-11-04T01:17:22+00:00", "level": "INFO", "message": "generate_datasets concluído", "stage": "generate_datasets", "status": "success", "rows": 9210, "duration_s": 0.101}
+{"ts": "2026-11-04T01:17:22+00:00", "level": "INFO", "message": "data_contract_reference iniciado", "stage": "data_contract_reference", "status": "started"}
+{"ts": "2026-11-04T01:17:22+00:00", "level": "INFO", "message": "data_contract_reference concluído", "stage": "data_contract_reference", "status": "success", "rows": 6000, "contract_passed": true, "duration_s": 0.018}
+{"ts": "2026-11-04T01:17:22+00:00", "level": "INFO", "message": "train_baseline iniciado", "stage": "train_baseline", "status": "started"}
+{"ts": "2026-11-04T01:17:23+00:00", "level": "INFO", "message": "train_baseline concluído", "stage": "train_baseline", "status": "success", "rows": 6000, "auc": 0.7141, "duration_s": 1.243}
+{"ts": "2026-11-04T01:17:23+00:00", "level": "INFO", "message": "data_contract_bad_batch iniciado", "stage": "data_contract_bad_batch", "status": "started"}
+{"ts": "2026-11-04T01:17:23+00:00", "level": "ERROR", "message": "data_contract_bad_batch FALHOU: Lote rejeitado: 55/210 linhas violam o contrato (7 tipos de violação).", "stage": "data_contract_bad_batch", "status": "failed", "error": "DataContractError", "rows": 210, "duration_s": 0.074}
+{"ts": "2026-11-04T01:17:23+00:00", "level": "WARNING", "message": "INGESTÃO BLOQUEADA: Lote rejeitado: 55/210 linhas violam o contrato (7 tipos de violação).", "stage": "ingestion", "status": "blocked", "failed_rows": 55}
+{"ts": "2026-11-04T01:17:25+00:00", "level": "INFO", "message": "MLflow: run 'etapa1_baseline' registrada", "stage": "mlflow", "status": "success"}
+{"ts": "2026-11-04T01:17:29+00:00", "level": "INFO", "message": "data_contract_production iniciado", "stage": "data_contract_production", "status": "started"}
+{"ts": "2026-11-04T01:17:29+00:00", "level": "INFO", "message": "data_contract_production concluído", "stage": "data_contract_production", "status": "success", "rows": 3000, "contract_passed": true, "duration_s": 0.018}
+{"ts": "2026-11-04T01:17:29+00:00", "level": "INFO", "message": "predict iniciado", "stage": "predict", "status": "started"}
+{"ts": "2026-11-04T01:17:29+00:00", "level": "INFO", "message": "predict concluído", "stage": "predict", "status": "success", "rows": 3000, "duration_s": 0.046}
+{"ts": "2026-11-04T01:17:29+00:00", "level": "INFO", "message": "drift_statistics iniciado", "stage": "drift_statistics", "status": "started"}
+{"ts": "2026-11-04T01:17:29+00:00", "level": "INFO", "message": "drift_statistics concluído", "stage": "drift_statistics", "status": "success", "features_with_drift": 4, "rows": 3000, "duration_s": 0.43}
+{"ts": "2026-11-04T01:17:29+00:00", "level": "INFO", "message": "evidently_reports iniciado", "stage": "evidently_reports", "status": "started"}
+{"ts": "2026-11-04T01:17:33+00:00", "level": "INFO", "message": "evidently_reports concluído", "stage": "evidently_reports", "status": "success", "evidently_drifted_psi": 5.0, "evidently_drifted_ks": 5.0, "duration_s": 3.554}
+{"ts": "2026-11-04T01:17:33+00:00", "level": "INFO", "message": "performance_monitoring iniciado", "stage": "performance_monitoring", "status": "started"}
+{"ts": "2026-11-04T01:17:33+00:00", "level": "INFO", "message": "performance_monitoring concluído", "stage": "performance_monitoring", "status": "success", "duration_s": 0.023}
+{"ts": "2026-11-04T01:17:33+00:00", "level": "ERROR", "message": "ALERTA data_drift: PSI crítico em taxa_desemprego_regional: 3.55", "stage": "alert", "status": "critical", "alert_type": "data_drift"}
+{"ts": "2026-11-04T01:17:33+00:00", "level": "ERROR", "message": "ALERTA data_drift: PSI crítico em renda_mensal: 0.38", "stage": "alert", "status": "critical", "alert_type": "data_drift"}
+{"ts": "2026-11-04T01:17:33+00:00", "level": "ERROR", "message": "ALERTA data_drift: PSI crítico em comprometimento_renda: 0.32", "stage": "alert", "status": "critical", "alert_type": "data_drift"}
+{"ts": "2026-11-04T01:17:33+00:00", "level": "WARNING", "message": "ALERTA data_drift: PSI em atenção em valor_emprestimo: 0.18", "stage": "alert", "status": "warning", "alert_type": "data_drift"}
+{"ts": "2026-11-04T01:17:33+00:00", "level": "WARNING", "message": "ALERTA data_quality: Lote bloqueado pelo contrato: 26.2% das linhas inválidas", "stage": "alert", "status": "warning", "alert_type": "data_quality"}
+{"ts": "2026-11-04T01:17:35+00:00", "level": "INFO", "message": "MLflow: run 'etapa2_drift' registrada", "stage": "mlflow", "status": "success"}
+{"ts": "2026-11-04T01:19:09+00:00", "level": "INFO", "message": "data_contract_production iniciado", "stage": "data_contract_production", "status": "started"}
+{"ts": "2026-11-04T01:19:09+00:00", "level": "INFO", "message": "data_contract_production concluído", "stage": "data_contract_production", "status": "success", "rows": 3000, "contract_passed": true, "duration_s": 0.018}
+{"ts": "2026-11-04T01:19:09+00:00", "level": "INFO", "message": "predict iniciado", "stage": "predict", "status": "started"}
+{"ts": "2026-11-04T01:19:10+00:00", "level": "INFO", "message": "predict concluído", "stage": "predict", "status": "success", "rows": 3000, "duration_s": 0.046}
+{"ts": "2026-11-04T01:19:10+00:00", "level": "INFO", "message": "drift_statistics iniciado", "stage": "drift_statistics", "status": "started"}
+{"ts": "2026-11-04T01:19:10+00:00", "level": "INFO", "message": "drift_statistics concluído", "stage": "drift_statistics", "status": "success", "features_with_drift": 4, "rows": 3000, "duration_s": 0.406}
+{"ts": "2026-11-04T01:19:10+00:00", "level": "INFO", "message": "evidently_reports iniciado", "stage": "evidently_reports", "status": "started"}
+{"ts": "2026-11-04T01:19:13+00:00", "level": "INFO", "message": "evidently_reports concluído", "stage": "evidently_reports", "status": "success", "evidently_drifted_psi": 5.0, "evidently_drifted_ks": 5.0, "duration_s": 3.296}
+{"ts": "2026-11-04T01:19:13+00:00", "level": "INFO", "message": "performance_monitoring iniciado", "stage": "performance_monitoring", "status": "started"}
+{"ts": "2026-11-04T01:19:13+00:00", "level": "INFO", "message": "performance_monitoring concluído", "stage": "performance_monitoring", "status": "success", "duration_s": 0.022}
+{"ts": "2026-11-04T01:19:13+00:00", "level": "ERROR", "message": "ALERTA data_drift: PSI crítico em taxa_desemprego_regional: 3.55", "stage": "alert", "status": "critical", "alert_type": "data_drift"}
+{"ts": "2026-11-04T01:19:13+00:00", "level": "ERROR", "message": "ALERTA data_drift: PSI crítico em renda_mensal: 0.38", "stage": "alert", "status": "critical", "alert_type": "data_drift"}
+{"ts": "2026-11-04T01:19:13+00:00", "level": "ERROR", "message": "ALERTA data_drift: PSI crítico em comprometimento_renda: 0.32", "stage": "alert", "status": "critical", "alert_type": "data_drift"}
+{"ts": "2026-11-04T01:19:13+00:00", "level": "WARNING", "message": "ALERTA data_drift: PSI em atenção em valor_emprestimo: 0.18", "stage": "alert", "status": "warning", "alert_type": "data_drift"}
+{"ts": "2026-11-04T01:19:13+00:00", "level": "ERROR", "message": "ALERTA concept_drift: AUC caiu 0.028 em produção", "stage": "alert", "status": "critical", "alert_type": "concept_drift"}
+{"ts": "2026-11-04T01:19:13+00:00", "level": "WARNING", "message": "ALERTA data_quality: Lote bloqueado pelo contrato: 26.2% das linhas inválidas", "stage": "alert", "status": "warning", "alert_type": "data_quality"}
+{"ts": "2026-11-04T01:19:15+00:00", "level": "INFO", "message": "MLflow: run 'etapa2_drift' registrada", "stage": "mlflow", "status": "success"}
+{"ts": "2026-11-04T01:19:20+00:00", "level": "INFO", "message": "dashboard gerado", "stage": "build_dashboard", "status": "success"}
+{"ts": "2026-11-04T01:19:57+00:00", "level": "INFO", "message": "generate_datasets iniciado", "stage": "generate_datasets", "status": "started"}
+{"ts": "2026-11-04T01:19:57+00:00", "level": "INFO", "message": "generate_datasets concluído", "stage": "generate_datasets", "status": "success", "rows": 9210, "duration_s": 0.097}
+{"ts": "2026-11-04T01:19:57+00:00", "level": "INFO", "message": "data_contract_reference iniciado", "stage": "data_contract_reference", "status": "started"}
+{"ts": "2026-11-04T01:19:57+00:00", "level": "INFO", "message": "data_contract_reference concluído", "stage": "data_contract_reference", "status": "success", "rows": 6000, "contract_passed": true, "duration_s": 0.019}
+{"ts": "2026-11-04T01:19:57+00:00", "level": "INFO", "message": "train_baseline iniciado", "stage": "train_baseline", "status": "started"}
+{"ts": "2026-11-04T01:19:58+00:00", "level": "INFO", "message": "train_baseline concluído", "stage": "train_baseline", "status": "success", "rows": 6000, "auc": 0.7141, "duration_s": 1.147}
+{"ts": "2026-11-04T01:19:58+00:00", "level": "INFO", "message": "data_contract_bad_batch iniciado", "stage": "data_contract_bad_batch", "status": "started"}
+{"ts": "2026-11-04T01:19:58+00:00", "level": "ERROR", "message": "data_contract_bad_batch FALHOU: Lote rejeitado: 55/210 linhas violam o contrato (7 tipos de violação).", "stage": "data_contract_bad_batch", "status": "failed", "error": "DataContractError", "rows": 210, "duration_s": 0.068}
+{"ts": "2026-11-04T01:19:58+00:00", "level": "WARNING", "message": "INGESTÃO BLOQUEADA: Lote rejeitado: 55/210 linhas violam o contrato (7 tipos de violação).", "stage": "ingestion", "status": "blocked", "failed_rows": 55}
+{"ts": "2026-11-04T01:20:00+00:00", "level": "INFO", "message": "MLflow: run 'etapa1_baseline' registrada", "stage": "mlflow", "status": "success"}
+{"ts": "2026-11-04T01:20:03+00:00", "level": "INFO", "message": "data_contract_production iniciado", "stage": "data_contract_production", "status": "started"}
+{"ts": "2026-11-04T01:20:03+00:00", "level": "INFO", "message": "data_contract_production concluído", "stage": "data_contract_production", "status": "success", "rows": 3000, "contract_passed": true, "duration_s": 0.019}
+{"ts": "2026-11-04T01:20:03+00:00", "level": "INFO", "message": "predict iniciado", "stage": "predict", "status": "started"}
+{"ts": "2026-11-04T01:20:03+00:00", "level": "INFO", "message": "predict concluído", "stage": "predict", "status": "success", "rows": 3000, "duration_s": 0.043}
+{"ts": "2026-11-04T01:20:03+00:00", "level": "INFO", "message": "drift_statistics iniciado", "stage": "drift_statistics", "status": "started"}
+{"ts": "2026-11-04T01:20:04+00:00", "level": "INFO", "message": "drift_statistics concluído", "stage": "drift_statistics", "status": "success", "features_with_drift": 4, "rows": 3000, "duration_s": 0.381}
+{"ts": "2026-11-04T01:20:04+00:00", "level": "INFO", "message": "evidently_reports iniciado", "stage": "evidently_reports", "status": "started"}
+{"ts": "2026-11-04T01:20:07+00:00", "level": "INFO", "message": "evidently_reports concluído", "stage": "evidently_reports", "status": "success", "evidently_drifted_psi": 5.0, "evidently_drifted_ks": 5.0, "duration_s": 3.392}
+{"ts": "2026-11-04T01:20:07+00:00", "level": "INFO", "message": "performance_monitoring iniciado", "stage": "performance_monitoring", "status": "started"}
+{"ts": "2026-11-04T01:20:07+00:00", "level": "INFO", "message": "performance_monitoring concluído", "stage": "performance_monitoring", "status": "success", "duration_s": 0.021}
+{"ts": "2026-11-04T01:20:07+00:00", "level": "ERROR", "message": "ALERTA data_drift: PSI crítico em taxa_desemprego_regional: 3.55", "stage": "alert", "status": "critical", "alert_type": "data_drift"}
+{"ts": "2026-11-04T01:20:07+00:00", "level": "ERROR", "message": "ALERTA data_drift: PSI crítico em renda_mensal: 0.38", "stage": "alert", "status": "critical", "alert_type": "data_drift"}
+{"ts": "2026-11-04T01:20:07+00:00", "level": "ERROR", "message": "ALERTA data_drift: PSI crítico em comprometimento_renda: 0.32", "stage": "alert", "status": "critical", "alert_type": "data_drift"}
+{"ts": "2026-11-04T01:20:07+00:00", "level": "WARNING", "message": "ALERTA data_drift: PSI em atenção em valor_emprestimo: 0.18", "stage": "alert", "status": "warning", "alert_type": "data_drift"}
+{"ts": "2026-11-04T01:20:07+00:00", "level": "ERROR", "message": "ALERTA concept_drift: AUC caiu 0.028 em produção", "stage": "alert", "status": "critical", "alert_type": "concept_drift"}
+{"ts": "2026-11-04T01:20:07+00:00", "level": "WARNING", "message": "ALERTA data_quality: Lote bloqueado: 26.2% linhas inválidas", "stage": "alert", "status": "warning", "alert_type": "data_quality"}
+{"ts": "2026-11-04T01:20:09+00:00", "level": "INFO", "message": "MLflow: run 'etapa2_drift' registrada", "stage": "mlflow", "status": "success"}
+{"ts": "2026-11-04T01:20:10+00:00", "level": "INFO", "message": "dashboard gerado", "stage": "build_dashboard", "status": "success"}
+{"ts": "2026-11-13T02:33:27+00:00", "level": "INFO", "message": "generate_datasets iniciado", "stage": "generate_datasets", "status": "started"}
+{"ts": "2026-11-13T02:33:27+00:00", "level": "INFO", "message": "generate_datasets concluído", "stage": "generate_datasets", "status": "success", "rows": 9210, "duration_s": 0.057}
+{"ts": "2026-11-13T02:33:27+00:00", "level": "INFO", "message": "data_contract_reference iniciado", "stage": "data_contract_reference", "status": "started"}
+{"ts": "2026-11-13T02:33:27+00:00", "level": "INFO", "message": "data_contract_reference concluído", "stage": "data_contract_reference", "status": "success", "rows": 6000, "contract_passed": true, "duration_s": 0.021}
+{"ts": "2026-11-13T02:33:27+00:00", "level": "INFO", "message": "train_baseline iniciado", "stage": "train_baseline", "status": "started"}
+{"ts": "2026-11-13T02:33:27+00:00", "level": "INFO", "message": "train_baseline concluído", "stage": "train_baseline", "status": "success", "rows": 6000, "auc": 0.7141, "duration_s": 0.688}
+{"ts": "2026-11-13T02:33:27+00:00", "level": "INFO", "message": "data_contract_bad_batch iniciado", "stage": "data_contract_bad_batch", "status": "started"}
+{"ts": "2026-11-13T02:33:27+00:00", "level": "ERROR", "message": "data_contract_bad_batch FALHOU: Lote rejeitado: 55/210 linhas violam o contrato (7 tipos de violação).", "stage": "data_contract_bad_batch", "status": "failed", "error": "DataContractError", "rows": 210, "duration_s": 0.031}
+{"ts": "2026-11-13T02:33:27+00:00", "level": "WARNING", "message": "INGESTÃO BLOQUEADA: Lote rejeitado: 55/210 linhas violam o contrato (7 tipos de violação).", "stage": "ingestion", "status": "blocked", "failed_rows": 55}
+{"ts": "2026-11-13T02:33:30+00:00", "level": "INFO", "message": "MLflow: run 'etapa1_baseline' registrada", "stage": "mlflow", "status": "success"}
+{"ts": "2026-11-13T02:35:52+00:00", "level": "INFO", "message": "generate_datasets iniciado", "stage": "generate_datasets", "status": "started"}
+{"ts": "2026-11-13T02:35:52+00:00", "level": "INFO", "message": "generate_datasets concluído", "stage": "generate_datasets", "status": "success", "rows": 9210, "duration_s": 0.063}
+{"ts": "2026-11-13T02:35:52+00:00", "level": "INFO", "message": "data_contract_reference iniciado", "stage": "data_contract_reference", "status": "started"}
+{"ts": "2026-11-13T02:35:52+00:00", "level": "INFO", "message": "data_contract_reference concluído", "stage": "data_contract_reference", "status": "success", "rows": 6000, "contract_passed": true, "duration_s": 0.023}
+{"ts": "2026-11-13T02:35:52+00:00", "level": "INFO", "message": "train_baseline iniciado", "stage": "train_baseline", "status": "started"}
+{"ts": "2026-11-13T02:35:53+00:00", "level": "INFO", "message": "train_baseline concluído", "stage": "train_baseline", "status": "success", "rows": 6000, "auc": 0.7141, "duration_s": 0.739}
+{"ts": "2026-11-13T02:35:53+00:00", "level": "INFO", "message": "data_contract_bad_batch iniciado", "stage": "data_contract_bad_batch", "status": "started"}
+{"ts": "2026-11-13T02:35:53+00:00", "level": "ERROR", "message": "data_contract_bad_batch FALHOU: Lote rejeitado: 55/210 linhas violam o contrato (7 tipos de violação).", "stage": "data_contract_bad_batch", "status": "failed", "error": "DataContractError", "rows": 210, "duration_s": 0.023}
+{"ts": "2026-11-13T02:35:53+00:00", "level": "WARNING", "message": "INGESTÃO BLOQUEADA: Lote rejeitado: 55/210 linhas violam o contrato (7 tipos de violação).", "stage": "ingestion", "status": "blocked", "failed_rows": 55}
+{"ts": "2026-11-13T02:35:55+00:00", "level": "INFO", "message": "MLflow: run 'etapa1_baseline' registrada", "stage": "mlflow", "status": "success"}
+{"ts": "2026-11-13T02:35:58+00:00", "level": "INFO", "message": "data_contract_production iniciado", "stage": "data_contract_production", "status": "started"}
+{"ts": "2026-11-13T02:35:58+00:00", "level": "INFO", "message": "data_contract_production concluído", "stage": "data_contract_production", "status": "success", "rows": 3000, "contract_passed": true, "duration_s": 0.043}
+{"ts": "2026-11-13T02:35:58+00:00", "level": "INFO", "message": "predict iniciado", "stage": "predict", "status": "started"}
+{"ts": "2026-11-13T02:35:58+00:00", "level": "INFO", "message": "predict concluído", "stage": "predict", "status": "success", "rows": 3000, "duration_s": 0.134}
+{"ts": "2026-11-13T02:35:58+00:00", "level": "INFO", "message": "drift_statistics iniciado", "stage": "drift_statistics", "status": "started"}
+{"ts": "2026-11-13T02:35:59+00:00", "level": "INFO", "message": "drift_statistics concluído", "stage": "drift_statistics", "status": "success", "features_with_drift": 4, "rows": 3000, "duration_s": 0.181}
+{"ts": "2026-11-13T02:35:59+00:00", "level": "INFO", "message": "evidently_reports iniciado", "stage": "evidently_reports", "status": "started"}
+{"ts": "2026-11-13T02:36:00+00:00", "level": "INFO", "message": "evidently_reports concluído", "stage": "evidently_reports", "status": "success", "evidently_drifted_psi": 5.0, "evidently_drifted_ks": 5.0, "duration_s": 1.841}
+{"ts": "2026-11-13T02:36:00+00:00", "level": "INFO", "message": "performance_monitoring iniciado", "stage": "performance_monitoring", "status": "started"}
+{"ts": "2026-11-13T02:36:00+00:00", "level": "INFO", "message": "performance_monitoring concluído", "stage": "performance_monitoring", "status": "success", "duration_s": 0.011}
+{"ts": "2026-11-13T02:36:00+00:00", "level": "ERROR", "message": "ALERTA data_drift: PSI crítico em taxa_desemprego_regional: 3.55", "stage": "alert", "status": "critical", "alert_type": "data_drift"}
+{"ts": "2026-11-13T02:36:00+00:00", "level": "ERROR", "message": "ALERTA data_drift: PSI crítico em renda_mensal: 0.38", "stage": "alert", "status": "critical", "alert_type": "data_drift"}
+{"ts": "2026-11-13T02:36:00+00:00", "level": "ERROR", "message": "ALERTA data_drift: PSI crítico em comprometimento_renda: 0.32", "stage": "alert", "status": "critical", "alert_type": "data_drift"}
+{"ts": "2026-11-13T02:36:00+00:00", "level": "WARNING", "message": "ALERTA data_drift: PSI em atenção em valor_emprestimo: 0.18", "stage": "alert", "status": "warning", "alert_type": "data_drift"}
+{"ts": "2026-11-13T02:36:00+00:00", "level": "ERROR", "message": "ALERTA concept_drift: AUC caiu 0.028 em produção", "stage": "alert", "status": "critical", "alert_type": "concept_drift"}
+{"ts": "2026-11-13T02:36:00+00:00", "level": "WARNING", "message": "ALERTA data_quality: Lote bloqueado: 26.2% linhas inválidas", "stage": "alert", "status": "warning", "alert_type": "data_quality"}
+{"ts": "2026-11-13T02:36:03+00:00", "level": "INFO", "message": "MLflow: run 'etapa2_drift' registrada", "stage": "mlflow", "status": "success"}
+{"ts": "2026-11-13T02:36:04+00:00", "level": "INFO", "message": "dashboard gerado", "stage": "build_dashboard", "status": "success"}

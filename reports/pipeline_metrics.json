@@ -1,0 +1,282 @@
+{
+  "contract": {
+    "reference_passed": true,
+    "bad_batch_blocked": true,
+    "bad_batch_rows": 210,
+    "bad_batch_failed_rows": 55,
+    "bad_batch_failure_rate": 0.2619047619047619,
+    "violations": [
+      {
+        "column": "cliente_id",
+        "check": "field_uniqueness",
+        "n": "20",
+        "exemplo": "db512249548f8fdb"
+      },
+      {
+        "column": "idade",
+        "check": "in_range(18, 100)",
+        "n": "10",
+        "exemplo": "14"
+      },
+      {
+        "column": "inadimplente",
+        "check": "isin([0, 1])",
+        "n": "2",
+        "exemplo": "7"
+      },
+      {
+        "column": "prazo_meses",
+        "check": "isin([6, 12, 18, 24, 36, 48])",
+        "n": "3",
+        "exemplo": "0"
+      },
+      {
+        "column": "renda_mensal",
+        "check": "greater_than(0)",
+        "n": "5",
+        "exemplo": "-500.0"
+      },
+      {
+        "column": "renda_mensal",
+        "check": "not_nullable",
+        "n": "10",
+        "exemplo": "None"
+      },
+      {
+        "column": "taxa_desemprego_regional",
+        "check": "in_range(0, 30)",
+        "n": "5",
+        "exemplo": "250.0"
+      }
+    ],
+    "rules": {
+      "R1": "cliente_id único (sem duplicatas)",
+      "R2": "idade entre 18 e 100 anos",
+      "R3": "renda_mensal não nula, > 0 e <= 200.000",
+      "R4": "nenhuma coluna fora do contrato (bloqueia PII acidental)",
+      "R5": "taxa_desemprego_regional entre 0 e 30",
+      "R6": "prazo_meses ∈ {6, 12, 18, 24, 36, 48}",
+      "R7": "inadimplente ∈ {0, 1}"
+    }
+  },
+  "updated_at": "2026-11-13T02:36:04+00:00",
+  "model_reference": {
+    "auc": 0.7140982624853592,
+    "ks": 0.33091155671800837,
+    "accuracy": 0.758,
+    "precision": 0.3757396449704142,
+    "recall": 0.4551971326164875,
+    "f1": 0.41166936790923825,
+    "brier": 0.13823382408385726,
+    "mean_predicted_default": 0.1798329674688938,
+    "observed_default_rate": 0.186
+  },
+  "model_production": {
+    "auc": 0.6856297897220656,
+    "ks": 0.2834737147836189,
+    "accuracy": 0.595,
+    "precision": 0.4732912119471568,
+    "recall": 0.7344028520499108,
+    "f1": 0.5756199790429619,
+    "brier": 0.2210273115189619,
+    "mean_predicted_default": 0.37681469129080114,
+    "observed_default_rate": 0.374
+  },
+  "concept_drift": {
+    "auc_drop": 0.028468472763293673,
+    "ks_drop": 0.04743784193438949,
+    "recall_drop": -0.27920571943342337,
+    "calibration_gap": -0.0028146912908011412,
+    "target_rate_shift": 0.188
+  },
+  "drift": {
+    "n_features": 8,
+    "n_drifted": 4,
+    "drift_share": 0.5,
+    "evidently_drifted_psi": 5.0,
+    "evidently_drifted_ks": 5.0,
+    "features": [
+      {
+        "feature": "taxa_desemprego_regional",
+        "media_referencia": 6.497758333333333,
+        "media_producao": 8.998723333333333,
+        "variacao_pct": 38.48965861303451,
+        "psi": 3.552226260948137,
+        "psi_nivel": "critico",
+        "ks_stat": 0.6998333333333333,
+        "ks_p_value": 0.0,
+        "drift": true
+      },
+      {
+        "feature": "renda_mensal",
+        "media_referencia": 4021.610596666667,
+        "media_producao": 3026.00897,
+        "variacao_pct": -24.756291111125396,
+        "psi": 0.3764515028903497,
+        "psi_nivel": "critico",
+        "ks_stat": 0.25483333333333336,
+        "ks_p_value": 1.5014411334746818e-114,
+        "drift": true
+      },
+      {
+        "feature": "comprometimento_renda",
+        "media_referencia": 0.1239104,
+        "media_producao": 0.20766229999999997,
+        "variacao_pct": 67.59069456639632,
+        "psi": 0.3197592874168259,
+        "psi_nivel": "critico",
+        "ks_stat": 0.22816666666666668,
+        "ks_p_value": 1.0491860719317897e-91,
+        "drift": true
+      },
+      {
+        "feature": "valor_emprestimo",
+        "media_referencia": 6472.009843333334,
+        "media_producao": 8346.5568,
+        "variacao_pct": 28.96390768931838,
+        "psi": 0.1828137846402561,
+        "psi_nivel": "atencao",
+        "ks_stat": 0.1826666666666667,
+        "ks_p_value": 9.703843731161044e-59,
+        "drift": true
+      },
+      {
+        "feature": "idade",
+        "media_referencia": 38.531,
+        "media_producao": 38.109,
+        "variacao_pct": -1.0952220290155856,
+        "psi": 0.003315216299423208,
+        "psi_nivel": "estavel",
+        "ks_stat": 0.025500000000000023,
+        "ks_p_value": 0.14750526513221904,
+        "drift": false
+      },
+      {
+        "feature": "tempo_emprego_anos",
+        "media_referencia": 5.483866666666666,
+        "media_producao": 5.474566666666667,
+        "variacao_pct": -0.16958836830458512,
+        "psi": 0.0030857833378577443,
+        "psi_nivel": "estavel",
+        "ks_stat": 0.010666666666666713,
+        "ks_p_value": 0.9762006005003707,
+        "drift": false
+      },
+      {
+        "feature": "prazo_meses",
+        "media_referencia": 21.112,
+        "media_producao": 21.184,
+        "variacao_pct": 0.34103827207276893,
+        "psi": 0.002739774950779592,
+        "psi_nivel": "estavel",
+        "ks_stat": 0.01633333333333331,
+        "ks_p_value": 0.658099271724556,
+        "drift": false
+      },
+      {
+        "feature": "num_dividas_ativas",
+        "media_referencia": 1.3941666666666668,
+        "media_producao": 1.367,
+        "variacao_pct": -1.9485953377166854,
+        "psi": 0.0005144474233392129,
+        "psi_nivel": "estavel",
+        "ks_stat": 0.00883333333333336,
+        "ks_p_value": 0.9975558689897571,
+        "drift": false
+      }
+    ]
+  },
+  "alerts": {
+    "total": 6,
+    "critical": 4,
+    "items": [
+      {
+        "severity": "critical",
+        "type": "data_drift",
+        "message": "PSI crítico em taxa_desemprego_regional: 3.55"
+      },
+      {
+        "severity": "critical",
+        "type": "data_drift",
+        "message": "PSI crítico em renda_mensal: 0.38"
+      },
+      {
+        "severity": "critical",
+        "type": "data_drift",
+        "message": "PSI crítico em comprometimento_renda: 0.32"
+      },
+      {
+        "severity": "warning",
+        "type": "data_drift",
+        "message": "PSI em atenção em valor_emprestimo: 0.18"
+      },
+      {
+        "severity": "critical",
+        "type": "concept_drift",
+        "message": "AUC caiu 0.028 em produção"
+      },
+      {
+        "severity": "warning",
+        "type": "data_quality",
+        "message": "Lote bloqueado: 26.2% linhas inválidas"
+      }
+    ]
+  },
+  "stages": {
+    "generate_datasets": {
+      "status": "success",
+      "duration_s": 0.063,
+      "rows": 9210
+    },
+    "data_contract_reference": {
+      "status": "success",
+      "duration_s": 0.023,
+      "rows": 6000
+    },
+    "train_baseline": {
+      "status": "success",
+      "duration_s": 0.739,
+      "rows": 6000
+    },
+    "data_contract_bad_batch": {
+      "status": "failed",
+      "duration_s": 0.023,
+      "rows": 210
+    },
+    "mlflow": {
+      "status": "success",
+      "duration_s": null,
+      "rows": null
+    },
+    "data_contract_production": {
+      "status": "success",
+      "duration_s": 0.043,
+      "rows": 3000
+    },
+    "predict": {
+      "status": "success",
+      "duration_s": 0.134,
+      "rows": 3000
+    },
+    "drift_statistics": {
+      "status": "success",
+      "duration_s": 0.181,
+      "rows": 3000
+    },
+    "evidently_reports": {
+      "status": "success",
+      "duration_s": 1.841,
+      "rows": null
+    },
+    "performance_monitoring": {
+      "status": "success",
+      "duration_s": 0.011,
+      "rows": null
+    },
+    "build_dashboard": {
+      "status": "success",
+      "duration_s": null,
+      "rows": null
+    }
+  }
+}
